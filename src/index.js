@@ -2,8 +2,12 @@ module.exports = isWhitespace;
 
 
 function isWhitespace(ch) {
-    var charCode = ch.charCodeAt(0);
+    return isWhitespaceCode(ch.charCodeAt(0));
+}
 
+isWhitespace.code = isWhitespaceCode;
+
+function isWhitespaceCode(charCode) {
     return (
         (charCode >= 0x0009 && charCode <= 0x000D) ||
         charCode === 0x0020 ||
