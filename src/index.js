@@ -2,15 +2,14 @@ module.exports = isWhitespace;
 
 
 function isWhitespace(ch) {
+    var charCode = ch.charCodeAt(0);
+
     return (
-        ch === ' ' ||
-        ch === '\n' ||
-        ch === '\t' ||
-        ch === '\u00A0' ||
-        ch === '\u2028' ||
-        ch === '\u2029' ||
-        ch === '\f' ||
-        ch === '\r' ||
-        ch === '\v'
+        (charCode >= 0x0009 && charCode <= 0x000D) ||
+        charCode === 0x0020 ||
+        charCode === 0x0085 ||
+        charCode === 0x00A0 ||
+        charCode === 0x2028 ||
+        charCode === 0x2029
     );
 }
