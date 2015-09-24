@@ -22,8 +22,8 @@ function testChars(assert, chars, result, name) {
 
 tape("isWhitespace(ch: Character) should return true if character is whitespace", function(assert) {
 
-    testChars(assert, numbers, false, "should be false for number");
-    testChars(assert, chars, false, "should be false for alpha");
+    testChars(assert, numbers, false, "should be false for numeric");
+    testChars(assert, chars, false, "should be false for alphabetic");
     testChars(assert, punctuation, false, "should be false for punctuation");
     testChars(assert, spaces, true, "should be true for white space");
 
