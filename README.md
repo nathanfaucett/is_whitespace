@@ -1,4 +1,4 @@
 isWhitespace
 =======
 
-is whitespace for the browser and node.js
+checks if character is whitespace
